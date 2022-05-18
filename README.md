@@ -38,7 +38,15 @@ Refer to the section "Implementation" below to get more information on implement
 
 Implement this procedure to test this solution.
 
-* <u>Step 1</u>:  
+* <u>Step 1</u>: Create a workspace
+  From your machine create a workspace directory:
+  `mkdir iac-docker`
+  Then place yourself inside this workspace:
+  `cd iac-docker`
+  
+* <u>Step 2</u>: Clone this repository  
   Clone this repository into your working machine (Please use a test machine: VM, ...) by running the following command:
-
   `git clone `
+
+
+https://github.com/DCEN-tech/Test-deploy-nginx.git
