@@ -55,14 +55,20 @@ The following procedure will consider that all the pre-requisites described abov
 
 * <u>Step 2</u>: Deploy the infrastructure
     
-  `terraform init`  
+  ```bash
+  terraform init
+  ```  
   This command will prepare environment for Terraform operations by first downloading needed providers.  
   In our case, we will use this provider: [docker - by kreuzwerker](https://registry.terraform.io/providers/kreuzwerker/docker/latest)  
   
-  `terraform plan`  
+  ```bash
+  terraform plan
+  ```  
   This command is optional and will permit to control what Terraform is about to do to deploy the infrastructure.  
   
-  `terraform apply`  
+  ```bash
+  terraform apply
+  ```  
   With this command, we instruct Terraform to deploy the infrastructure.  
   It is expected as a result that the container is created and started.  
   As now, the container should have SSH server enabled but not yet Nginx.  
@@ -70,8 +76,10 @@ The following procedure will consider that all the pre-requisites described abov
   
 * <u>Step 3</u>: Setup Nginx
   
-  `cd ansible`  
-  `ansible-playbook playbook_nginx_setup.yml`  
+  ```bash
+  cd ansible
+  ansible-playbook playbook_nginx_setup.yml
+  ```
   With this command, Ansible will connect to the container via SSH to set up Nginx.  
   This is configured via an Nginx Ansible role, which will:
      1. Install Nginx
@@ -81,7 +89,9 @@ The following procedure will consider that all the pre-requisites described abov
 
 * <u>Step 4</u>: Test 
  
-  `curl -X GET http://localhost:8080`  
+  ```bash  
+  curl -X GET http://localhost:8080
+  ```  
   This command will try to join the Nginx server (running from inside the container) from the workstation.  
   So for this, we submit an http GET request to the localhost (the workstation) on port 8080 (port that redirects to port 80 on the container).  
   If all works correctly you should then see the content of the index.html file.
