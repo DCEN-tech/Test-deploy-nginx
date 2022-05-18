@@ -1,0 +1,7 @@
+---
+# vars file for nginx
+server_port: 80
+server_name: "localhost"
+root_path: "/var/www/html"
+index_file: "index.html"
+

@@ -1,0 +1,7 @@
+- name: Setup Nginx server
+  hosts:
+    - web_servers
+  connection: ssh
+  become: true
+  roles:
+  - nginx

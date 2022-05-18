@@ -1,0 +1,8 @@
+server {
+   listen {{ server_port }} ;
+   server_name {{ server_name }} ;
+   location / {
+     root {{ root_path }} ; 
+     index {{ index_file }} ;
+   }
+}
