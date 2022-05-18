@@ -36,17 +36,20 @@ Refer to the section "Implementation" below to get more information on implement
 
 ### Procedure
 
-Implement this procedure to test this solution.
+The following procedure will consider that all the pre-requisites described above are already guaranteed.
 
-* <u>Step 1</u>: Create a workspace
-  From your machine create a workspace directory:
-  `mkdir iac-docker`
-  Then place yourself inside this workspace:
+* <u>Step 1</u>: Clone this repository  
+  Place yourself inside a working directory then run the following command to clone this repository into your machine (Please use a test machine: VM, ...)::
+  `git clone https://github.com/DCEN-tech/Test-deploy-nginx.git iac-docker`  
   `cd iac-docker`
   
-* <u>Step 2</u>: Clone this repository  
-  Clone this repository into your working machine (Please use a test machine: VM, ...) by running the following command:
-  `git clone `
+* <u>Step 2</u>: Deploy the infrastructure
+    
+  `terraform init`  
+  This command will prepare environment for Terraform operations by first downloading needed providers.  
+  In our case, we will use this provider: [docker - by kreuzwerker](https://registry.terraform.io/providers/kreuzwerker/docker/latest)  
+  
+  
 
 
-https://github.com/DCEN-tech/Test-deploy-nginx.git
+
