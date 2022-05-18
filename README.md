@@ -42,8 +42,10 @@ The following procedure will consider that all the pre-requisites described abov
 
 * <u>Step 1</u>: Clone this repository  
   Place yourself inside a working directory then run the following command to clone this repository into your workstation (Please use a test machine: VM, ...):  
-  `git clone https://github.com/DCEN-tech/Test-deploy-nginx.git iac-docker`  
-  `cd iac-docker`
+  ```bash
+  git clone https://github.com/DCEN-tech/Test-deploy-nginx.git iac-docker
+  cd iac-docker
+  ```
 
 * <u>Step 2</u>: Provide SSH public key
 
